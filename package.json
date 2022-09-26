@@ -1,7 +1,7 @@
 {
   "name": "@enouvo/react-uikit",
   "author": "Son Tran",
-  "version": "2.1.1",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/web-uikit.esm.js",
   "type": "module",
