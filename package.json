@@ -1,0 +1,83 @@
+{
+  "name": "@enouvo/react-uikit",
+  "author": "Son Tran",
+  "version": "2.1.1",
+  "main": "dist/index.js",
+  "module": "dist/web-uikit.esm.js",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepare": "tsc",
+    "build": "tsdx build --format esm && cp -R src/styles dist",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.{tsx,ts}\" --fix",
+    "lint-staged": "lint-staged",
+    "lint-pass": "echo '\\033[4;32m♡ ' Format complete ♡' \\033[0m'"
+  },
+  "sideEffects": [
+    "*.less"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.enouvo.com/enouv8/base-projects/web-uikit"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@enouvo/eslint-config-react": "^1.1.1",
+    "@types/lodash.get": "^4.4.7",
+    "@types/node": "^18.7.19",
+    "@types/react": "^18.0.21",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/tinycolor2": "^1.4.3",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "antd": "^4.23.2",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.6",
+    "react-router-dom": "^6.4.1",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+    "@emotion/react": ">=11.10.4",
+    "@emotion/styled": ">= 11.10.4",
+    "antd": ">=4.21.5",
+    "axios": ">=0.24.0",
+    "dayjs": ">=1.10.7",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
+    "react-i18next": ">=11.17.4",
+    "react-router-dom": ">=5.3.0"
+  },
+  "dependencies": {
+    "bezier-easing": "^2.1.0",
+    "lodash.get": "^4.4.2",
+    "query-string": "^7.1.1",
+    "tinycolor2": "^1.4.2"
+  }
+}
