@@ -26,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.enouvo.com/enouv8/base-projects/web-uikit"
+    "url": "https://github.com/Enouvo/react-uikit"
   },
   "devDependencies": {
     "@emotion/react": "^11.10.4",
