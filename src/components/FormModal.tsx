@@ -35,15 +35,15 @@ export const FormModal = forwardRef(
     const [form] = Form.useForm();
     const { t } = useTranslation();
 
-    const afterVisibleChange = (value: boolean) => {
+    const afterOpenChange = (value: boolean) => {
       if (!value) form.resetFields();
     };
     return (
       <Drawer
         title={selectedItem?.id ? t(`${name}.update`) : t(`${name}.create`)}
-        visible={!!selectedItem}
+        open={!!selectedItem}
         onClose={onClose}
-        afterVisibleChange={afterVisibleChange}
+        afterOpenChange={afterOpenChange}
         destroyOnClose
         width={width}
       >
