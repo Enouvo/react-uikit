@@ -19,9 +19,10 @@ export const uploadFile = async ({
     },
     method: "PUT",
     onUploadProgress: progressEvent => {
-      onUploadProgress?.(
-        Math.round((progressEvent.loaded * 100) / progressEvent.total)
-      );
+      progressEvent?.total &&
+        onUploadProgress?.(
+          Math.round((progressEvent.loaded * 100) / progressEvent.total)
+        );
     },
     url: signedRequest
   });

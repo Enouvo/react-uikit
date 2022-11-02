@@ -7,7 +7,7 @@ export type TimePickerProps = Omit<PickerTimeProps<Dayjs>, "picker">;
 
 export const TimePicker = React.forwardRef<never, TimePickerProps>(
   (props, ref) => (
-    <DatePicker {...props} picker="time" mode={undefined} ref={ref} />
+    <DatePicker {...props} mode={undefined} picker="time" ref={ref} />
   )
 );
 

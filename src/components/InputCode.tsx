@@ -75,16 +75,16 @@ export function InputCode({ length = 6, onChange }: CodeInputProps) {
     <Wrapper className="flex flex-nowrap justify-between">
       {code.map((num, idx) => (
         <input
-          key={idx}
-          type="text"
-          inputMode="numeric"
-          maxLength={1}
-          value={num}
           autoFocus={!code[0].length && idx === 0}
+          inputMode="numeric"
+          key={idx}
+          maxLength={1}
           onChange={e => processInput(e, idx)}
           onKeyUp={e => onKeyUp(e, idx)}
           onPaste={handlePaste}
           ref={ref => ref && inputs.current.push(ref)}
+          type="text"
+          value={num}
         />
       ))}
     </Wrapper>

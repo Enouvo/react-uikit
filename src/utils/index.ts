@@ -8,3 +8,5 @@ export * from "./validation";
 export * from "./omitDeep";
 export * from "./notification";
 export * from "./url";
+export * from "./string";
+export * from "./number";

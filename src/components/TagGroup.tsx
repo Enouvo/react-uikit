@@ -7,12 +7,12 @@ interface Props {
 }
 
 export function TagGroup({ isDisabled, onChange }: Props) {
-  const [emails, setEmail] = useState<string[]>([]);
+  const [emails, setEmails] = useState<string[]>([]);
   const [newEmail, setNewEmail] = useState("");
 
   const handleClose = (emailRemove: string) => {
     const tags = emails.filter(email => email !== emailRemove);
-    setEmail(tags);
+    setEmails(tags);
     onChange?.(tags);
   };
   const onEmailChange = (email: ChangeEvent<HTMLInputElement>) => {
@@ -30,8 +30,8 @@ export function TagGroup({ isDisabled, onChange }: Props) {
   function EmailTag(item: string, index: number) {
     return (
       <Tag
-        key={index}
         closable
+        key={index}
         onClose={email => {
           email.preventDefault();
           handleClose(item);
@@ -46,12 +46,12 @@ export function TagGroup({ isDisabled, onChange }: Props) {
     <>
       {emails.map((item, index) => EmailTag(item, index))}
       <Input
-        type="email"
         className="mt-2"
-        onChange={onEmailChange}
-        value={newEmail}
-        onPressEnter={handleInputConfirm}
         disabled={isDisabled}
+        onChange={onEmailChange}
+        onPressEnter={handleInputConfirm}
+        type="email"
+        value={newEmail}
       />
     </>
   );

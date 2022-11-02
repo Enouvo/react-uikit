@@ -40,27 +40,27 @@ export const FormModal = forwardRef(
     };
     return (
       <Drawer
-        title={selectedItem?.id ? t(`${name}.update`) : t(`${name}.create`)}
-        open={!!selectedItem}
-        onClose={onClose}
         afterOpenChange={afterOpenChange}
         destroyOnClose
+        onClose={onClose}
+        open={!!selectedItem}
+        title={selectedItem?.id ? t(`${name}.update`) : t(`${name}.create`)}
         width={width}
       >
         <Form
-          onFinish={value => onSubmit({ id: initialValues?.id, ...value })}
           form={form}
-          layout="vertical"
-          ref={ref}
           initialValues={initialValues}
+          layout="vertical"
+          onFinish={value => onSubmit({ id: initialValues?.id, ...value })}
+          ref={ref}
         >
           {cloneElement(children, {
             initialValues
           })}
-          <Row gutter={12} className="mt-12">
+          <Row className="mt-12" gutter={12}>
             <Col xs={12}>
               <Form.Item>
-                <Button type="ghost" onClick={onClose} block size="large">
+                <Button block onClick={onClose} size="large" type="ghost">
                   {t("button.cancel")}
                 </Button>
               </Form.Item>
@@ -68,12 +68,12 @@ export const FormModal = forwardRef(
             <Col xs={12}>
               <Form.Item>
                 <Button
-                  htmlType="submit"
-                  type="primary"
-                  loading={loading}
-                  size="large"
                   block
                   disabled={disabled}
+                  htmlType="submit"
+                  loading={loading}
+                  size="large"
+                  type="primary"
                 >
                   {initialValues?.id ? t("button.save") : t("button.create")}
                 </Button>
