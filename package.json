@@ -1,7 +1,7 @@
 {
   "name": "@enouvo/react-uikit",
   "author": "Son Tran",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "dist/index.js",
   "module": "dist/react-uikit.esm.js",
   "type": "module",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@enouvo/eslint-config-react": "^1.2.1",
+    "@enouvo/eslint-config-react": "^1.2.2",
     "@types/lodash.get": "^4.4.7",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
@@ -51,7 +51,7 @@
     "react-router-dom": "^6.4.3",
     "tsdx": "^0.14.1",
     "typescript": "^4.8.4",
-    "@enouvo/react-hooks": "^0.0.1"
+    "@enouvo/react-hooks": "^0.0.4"
   },
   "peerDependencies": {
     "@emotion/react": ">=11.10.4",
