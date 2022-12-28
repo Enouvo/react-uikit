@@ -35,7 +35,6 @@
     "@types/lodash.get": "^4.4.7",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
-    "@types/react-router-dom": "^5.3.3",
     "@types/tinycolor2": "^1.4.3",
     "@typescript-eslint/parser": "^5.42.0",
     "antd": "^4.24.0",
